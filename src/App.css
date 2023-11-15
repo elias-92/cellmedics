@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 375px;
+  font-family: 'Poppins', sans-serif;
+}
+/* Cambiar estilo al carrusel para poder dar una separacion a las card */
+.slick-track {
+  display: flex !important;
+  gap: 15px !important;
+  left: -20px !important;
+}
