@@ -78,7 +78,7 @@ const Navbar = () => {
           <BsFacebook />
         </a>
         <a
-          href="tiktok.com/@repcell2023em"
+          href="https://www.tiktok.com/@repcell2023em"
           target="_blank"
           rel="noreferrer"
           className="text-3xl hover:text-gray-500"

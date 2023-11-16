@@ -11,7 +11,7 @@ const Footer = () => {
         </div>
         <div className="flex items-center space-x-8 pb-4">
           <a
-            href="https://instagram.com/repcell_e.m"
+            href="https://www.instagram.com/cellmedics.em"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-2xl hover:text-gray-500"
@@ -19,7 +19,7 @@ const Footer = () => {
             <FaInstagram />
           </a>
           <a
-            href="https://www.facebook.com/profile.php?id=61552207730823&mibextid=ZbWKwL"
+            href="https://www.facebook.com/profile.php?id=61553171596419&mibextid=ZbWKwL"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-2xl hover:text-gray-500"
@@ -27,7 +27,7 @@ const Footer = () => {
             <FaFacebook />
           </a>
           <a
-            href="https://www.facebook.com/profile.php?id=61552207730823&mibextid=ZbWKwL"
+            href="https://www.tiktok.com/@repcell2023em"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-2xl hover:text-gray-500"
