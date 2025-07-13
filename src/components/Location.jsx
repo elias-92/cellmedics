@@ -13,7 +13,7 @@ const Location = () => {
               <strong>
                 ¿Dónde nos encontras? <br />
               </strong>
-              Pellegrini 377, Cap. Bermudez
+              Jujuy 267, Cap. Bermudez
             </p>
           </div>
           <div className="border-2 border-solid rounded-md py-5 border-[#375C98]">
@@ -22,8 +22,8 @@ const Location = () => {
                 Horarios de Atención
                 <br />
               </strong>
-              Lunes a Viernes de 10 a 18hs <br />
-              Sábados de 9 a 13 hs
+              Lunes a Sabado <br />
+              De 09 a 12.30hs y De 16.30 a 20hs
             </p>
           </div>
         </div>
@@ -32,7 +32,7 @@ const Location = () => {
             <iframe
               title="Ubicación de cellmedics"
               src={process.env.REACT_APP_URL_GOOGLE_MAP}
-              className='w-full h-[200px] md:h-[350px]'
+              className="w-full h-[200px] md:h-[350px]"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

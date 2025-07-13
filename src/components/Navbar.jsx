@@ -1,39 +1,62 @@
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { BsInstagram, BsFacebook, BsTiktok } from 'react-icons/bs'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-scroll'
+import { motion } from 'framer-motion'
+import logo from '../assets/img/logo.png'
 
 const Navbar = () => {
   const [isShowMenu, setIsShowMenu] = useState(false)
-  const links = [
-    {
-      id: 1,
-      link: 'Inicio'
-    },
-    {
-      id: 3,
-      link: 'Servicios'
-    },
-    {
-      id: 4,
-      link: 'Ubicacion'
-    },
-    {
-      id: 5,
-      link: 'Contacto'
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
     }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const links = [
+    { id: 1, link: 'Inicio', title: 'Inicio' },
+    { id: 2, link: 'SobreMi', title: 'Sobre Nosotros' },
+    { id: 3, link: 'Servicios', title: 'Servicios' },
+    { id: 4, link: 'Ubicacion', title: 'Ubicación' },
+    { id: 5, link: 'Contacto', title: 'Contacto' }
   ]
+
   return (
-    <header className="fixed top-0 flex bg-gray-900 justify-between items-center px-4 md:px-6 text-white mx-auto lg:px-12 md:py-0 w-full z-[100] transition-colors duration-700">
-      <a href="#Inicio">
-        <h2 className="text-bold text-4xl p-4">CellMedics</h2>
+    <motion.header
+      className={`flex justify-between items-center text-white fixed top-0 w-full z-[100] px-4 md:px-6 lg:px-12 transition-colors duration-500 ${
+        scrolled ? 'bg-gray-900 shadow' : 'bg-transparent'
+      }`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      <a
+        href="#Inicio"
+        className=" w-[180px] h-[80px] flex items-center justify-center"
+      >
+        <img
+          src={logo}
+          alt="Logo"
+          className="w-[90%] h-auto"
+        />
       </a>
       <ul className="hidden lg:flex">
-        {links.map(({ link, id }) => (
+        {links.map(({ link, id, title }) => (
           <li
             key={id}
             className="cursor-pointer hover:text-gray-500 p-4 text-[1.1rem] lg:text-[1.3rem]"
           >
-            <a href={`#${link}`}>{link}</a>
+            <Link
+              to={link}
+              smooth={true}
+              duration={1000}
+              offset={-70}
+            >
+              {title}
+            </Link>
           </li>
         ))}
       </ul>
@@ -48,14 +71,17 @@ const Navbar = () => {
           {links.map(({ link, id }) => (
             <li
               key={id}
-              className="cursor-pointer hover:text-gray-500 px-4 py-6 text-4xl transition-all duration-300"
+              className="cursor-pointer hover:text-gray-500 px-4 py-6 text-4xl"
             >
-              <a
-                href={`#${link}`}
-                onClick={() => setIsShowMenu(!isShowMenu)}
+              <Link
+                to={link}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                onClick={() => setIsShowMenu(false)}
               >
                 {link}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -86,7 +112,7 @@ const Navbar = () => {
           <BsTiktok />
         </a>
       </div>
-    </header>
+    </motion.header>
   )
 }
 

@@ -1,4 +1,5 @@
 import emailjs from '@emailjs/browser'
+import { motion } from 'framer-motion'
 import { useState, useRef } from 'react'
 import { useForm } from '../hooks/useForm'
 import {
@@ -66,19 +67,33 @@ const Contact = () => {
   return (
     <section
       id="Contacto"
-      className="relative pt-[80px]"
+      className="relative pt-[40px]"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-[#e9f3f3] to-gray-900 opacity-50"></div>
 
       <div className="container relative z-10 mx-auto text-center md:pb-8">
         <div className="px-2 relative z-10">
-          <h2 className="text-4xl text-black font-bold mb-6">Contacto</h2>
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl text-black font-bold mb-6"
+          >
+            Contacto
+          </motion.h2>
           <p className="text-lg text-black mb-8">
             ¿Tienes alguna pregunta o consulta? ¡No dudes en contactarnos!
           </p>
         </div>
         {!showSuccess ? (
-          <div className="max-w-3xl mx-auto bg-gradient-to-b from-[#e9f3f3] to-gray-900 p-8 relative z-10 md:rounded-lg">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl mx-auto bg-gradient-to-b from-[#e9f3f3] to-gray-900 p-8 relative z-10 md:rounded-lg"
+          >
             <form
               onSubmit={handleSubmit}
               ref={form}
@@ -188,15 +203,16 @@ const Contact = () => {
                 {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
               </div>
               <div className="text-center">
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
                   type="submit"
                   className="group font-medium w-fit px-10 py-2 my-2 flex items-center rounded-md border-2 border-solid bg-[#224B8D] text-white cursor-pointer mx-auto duration-150 hover:bg-[#224b8de7]"
                 >
                   Enviar
-                </button>
+                </motion.button>
               </div>
             </form>
-          </div>
+          </motion.div>
         ) : (
           <Success setShowSuccess={setShowSuccess} />
         )}
