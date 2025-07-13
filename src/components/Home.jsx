@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll'
-import backgroundVideo from '../assets/video/videoLoop.webm'
 import { motion } from 'framer-motion'
+import backgroundImage from '../assets/img/banner-1.avif'
+import backgroundVideo from '../assets/video/videoLoop.webm'
 
 const Home = () => {
   return (
@@ -10,6 +11,11 @@ const Home = () => {
       style={{ minHeight: 'calc(100vh - 76px)' }}
     >
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+        <img
+          src={backgroundImage}
+          alt="CellMedics fondo"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
         <motion.video
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -32,7 +38,7 @@ const Home = () => {
           />
         </motion.video>
       </div>
-      <div className="absolute inset-0 bg-[#224b8d] opacity-50 z-10"></div>
+      <div className="absolute inset-0 bg-[#224b8d] opacity-30 z-10"></div>
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4">
         <motion.div
           initial={{ opacity: 0, y: -150 }}
@@ -59,7 +65,7 @@ const Home = () => {
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
-              className="group font-semibold w-fit px-6 py-3 my-2 flex items-center rounded-md border-2 border-solid bg-gray-300 text-gray-900 rounded-8 border-gray-300 cursor-pointer mx-auto duration-150 hover:bg-[#bdbcbc] relative"
+              className="group font-semibold w-fit px-6 py-3 my-2 flex items-center rounded-md border-2 border-solid bg-gray-300 text-gray-900 border-gray-300 cursor-pointer mx-auto duration-150 hover:bg-[#bdbcbc] relative"
             >
               Solicitar Presupuesto
             </motion.button>

@@ -1,9 +1,9 @@
-import { FaBars, FaTimes } from 'react-icons/fa'
-import { BsInstagram, BsFacebook, BsTiktok } from 'react-icons/bs'
-import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
 import logo from '../assets/img/logo.png'
+import { useState, useEffect } from 'react'
+import { FaBars, FaTimes } from 'react-icons/fa'
+import { BsInstagram, BsFacebook, BsTiktok } from 'react-icons/bs'
 
 const Navbar = () => {
   const [isShowMenu, setIsShowMenu] = useState(false)

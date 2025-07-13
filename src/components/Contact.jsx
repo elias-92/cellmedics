@@ -1,3 +1,4 @@
+import Success from './Success'
 import emailjs from '@emailjs/browser'
 import { motion } from 'framer-motion'
 import { useState, useRef } from 'react'
@@ -10,7 +11,6 @@ import {
   validateSelect,
   validateTextarea
 } from '../validations/formValidations'
-import Success from './Success'
 
 const Contact = () => {
   const form = useRef()

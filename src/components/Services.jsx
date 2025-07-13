@@ -1,11 +1,11 @@
+import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
-import changeBatery from '../assets/img/bateryChange.avif'
 import changePin from '../assets/img/changePin.avif'
 import changePhone from '../assets/img/changePhone.avif'
-import repairScreen from '../assets/img/screenRepair.avif'
 import waterDamage from '../assets/img/waterDamage.avif'
+import repairScreen from '../assets/img/screenRepair.avif'
+import changeBatery from '../assets/img/bateryChange.avif'
 import changeCamera from '../assets/img/changeCamera.avif'
-import { Link } from 'react-scroll'
 const serviceData = [
   {
     id: 1,
