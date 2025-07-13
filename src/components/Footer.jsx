@@ -23,7 +23,7 @@ const Footer = () => {
           />
           <p className="text-md">Tu solución en reparación de móviles</p>
         </div>
-        <div className="flex items-center space-x-8 pb-4">
+        <div className="flex items-center space-x-8 py-4">
           <a
             href="https://www.instagram.com/cellmedics.em"
             target="_blank"
