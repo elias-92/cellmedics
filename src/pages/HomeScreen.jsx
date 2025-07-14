@@ -21,7 +21,7 @@ const HomeScreen = () => {
         console.warn('El video no cargó en el tiempo esperado')
         setIsLoading(false)
       }
-    }, 2000)
+    }, 5000)
 
     return () => clearTimeout(timer)
   }, [videoHasLoaded])
