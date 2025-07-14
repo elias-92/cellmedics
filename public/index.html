@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
+    <!-- Metadatos básicos -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -8,30 +9,188 @@
     />
     <meta
       name="theme-color"
-      content="#000000"
+      content="#224b8d"
     />
+
+    <!-- SEO Primario -->
+    <title>Cellmedics | Reparación de Móviles Profesional en Argentina</title>
     <meta
       name="description"
-      content="Expertos en reparación de móviles. Solucionamos problemas de pantalla, batería, software y más. Profesional certificado, uso de piezas de calidad y servicio rápido. Recupera la funcionalidad de tu dispositivo con Cellmedics."
+      content="🔧 Reparación de móviles rápida y con garantía en Argentina. Expertos en pantallas, baterías y software. 📱 Servicio técnico certificado. ¡Presupuesto sin cargo!"
     />
     <meta
       name="keywords"
-      content="reparación de móviles, reparación de smartphones, arreglo de pantallas, servicio técnico de móviles, reparación de baterías, solución de problemas de software, reparación de cámaras, técnico certificado, piezas de calidad, servicio rápido, satisfacción garantizada"
+      content="reparación de celulares, Jujuy 267, Capitán Bermúdez, Santa Fe, arreglo de smartphones, cambio de pantalla, batería para celular, servicio técnico de celulares, reparación de móviles Argentina"
+    />
+    <meta
+      name="location"
+      content="Argentina"
     />
 
+    <!-- Datos geográficos -->
+    <meta
+      name="geo.placename"
+      content="Capitán Bermúdez, Santa Fe, Argentina"
+    />
+    <meta
+      name="geo.position"
+      content="-32.7236;-60.9803"
+    />
+    <meta
+      name="geo.region"
+      content="AR-S"
+    />
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta
+      property="og:title"
+      content="Cellmedics | Reparación Profesional de Celulares en Argentina"
+    />
+    <meta
+      property="og:locale"
+      content="es_AR"
+    />
+    <meta
+      property="og:description"
+      content="Reparación de celulares con garantía. Especialistas en pantallas, baterías y problemas de software. ¡Diagnóstico gratuito!"
+    />
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:url"
+      content="https://cellmedics.netlify.app"
+    />
+    <meta
+      property="og:image"
+      content="https://cellmedics.netlify.app/logo-social.jpg"
+    />
+    <meta
+      property="og:site_name"
+      content="Cellmedics Capitán Bermúdez"
+    />
+
+    <!-- Twitter Card -->
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+    <meta
+      name="twitter:title"
+      content="Cellmedics | Reparación de Celulares en Argentina"
+    />
+    <meta
+      name="twitter:description"
+      content="Reparación express de celulares con garantía. ¡Soluciones rápidas y económicas!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://cellmedics.netlify.app/logo-social.jpg"
+    />
+
+    <!-- Favicon Moderno -->
     <link
-      rel="shortcut icon"
+      rel="icon"
       href="%PUBLIC_URL%/favicon.ico"
       type="image/x-icon"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
     />
-    <title>Cellmedics-Reparación de móviles</title>
+    <link
+      rel="apple-touch-icon"
+      href="/apple-touch-icon.png"
+    />
+
+    <!-- Precarga de recursos -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="/src/assets/video/videoLoop.webm"
+      as="video"
+      type="video/webm"
+    />
+    <link
+      rel="preload"
+      href="/src/assets/img/logo.png"
+      as="image"
+      type="image/png"
+    />
+
+    <!-- Schema.org Local Business para Argentina -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Cellmedics",
+        "image": "https://cellmedics.netlify.app/logo.jpg",
+        "url": "https://cellmedics.netlify.app",
+        "telephone": "+5493413448590",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "[Jujuy 267]",
+          "addressLocality": "[Capitan Bermudez]",
+          "addressRegion": "[Santa Fe]",
+          "postalCode": "[2154]",
+          "addressCountry": "AR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-32.7236",
+          "longitude": "-60.9803"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:00",
+            "closes": "12:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "16:00",
+            "closes": "20:00"
+          }
+        ],
+        "priceRange": "$$",
+        "priceCurrency": "ARS"
+      }
+    </script>
+
+    <!-- Control de indexación -->
+    <link
+      rel="canonical"
+      href="https://cellmedics.netlify.app"
+    />
+    <meta
+      name="robots"
+      content="index, follow"
+    />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <strong
+        >Cellmedics requiere JavaScript para funcionar correctamente. Por favor activá JavaScript en
+        tu navegador.</strong
+      >
+    </noscript>
     <div id="root"></div>
+
+    <!-- Fallback para fuentes -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      />
+    </noscript>
   </body>
 </html>

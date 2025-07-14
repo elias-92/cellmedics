@@ -12,13 +12,24 @@ import GoogleReviews from '../components/GoogleReviews'
 
 const HomeScreen = () => {
   const [isLoading, setIsLoading] = useState(true)
+  const [videoHasLoaded, setVideoHasLoaded] = useState(false)
 
+  // Timeout de respaldo si el video no carga
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false)
+      if (!videoHasLoaded) {
+        console.warn('El video no cargó en el tiempo esperado')
+        setIsLoading(false)
+      }
     }, 2000)
+
     return () => clearTimeout(timer)
-  }, [])
+  }, [videoHasLoaded])
+
+  const handleVideoLoaded = () => {
+    setVideoHasLoaded(true)
+    setIsLoading(false)
+  }
 
   if (isLoading) {
     return (
@@ -60,7 +71,7 @@ const HomeScreen = () => {
   }
   return (
     <>
-      <Home />
+      <Home onVideoLoaded={handleVideoLoaded} />
       <AboutMe />
       <Services />
       <GoogleReviews />

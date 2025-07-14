@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import backgroundImage from '../assets/img/banner-1.avif'
 import backgroundVideo from '../assets/video/videoLoop.webm'
 
-const Home = () => {
+const Home = ({ onVideoLoaded }) => {
   return (
     <section
       id="Inicio"
@@ -31,6 +31,8 @@ const Home = () => {
             transform: 'translate(-50%, -50%)',
             objectPosition: '75% center'
           }}
+          onCanPlayThrough={onVideoLoaded}
+          onLoadedData={onVideoLoaded}
         >
           <source
             src={backgroundVideo}
